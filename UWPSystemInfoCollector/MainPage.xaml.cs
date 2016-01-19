@@ -120,6 +120,8 @@ namespace UWPSystemInfoCollector
                 AppendLog("ApplicationModel Package Information", 3);
 
                 AppendLog(() => Package.Current.DisplayName);
+                AppendLog(() => Package.Current.PublisherDisplayName);
+                AppendLog("Logo", Package.Current.Logo.ToString());
                 AppendLog(() => Package.Current.Id.FullName);
                 AppendLog(() => Package.Current.Id.FamilyName);
                 AppendLog(() => Package.Current.Id.Name);
