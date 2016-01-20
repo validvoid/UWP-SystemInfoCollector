@@ -125,7 +125,6 @@ namespace UWPSystemInfoCollector
                 AppendLog(() => Package.Current.Id.FullName);
                 AppendLog(() => Package.Current.Id.FamilyName);
                 AppendLog(() => Package.Current.Id.Name);
-
                 AppendLog(() => Package.Current.Id.Publisher);
                 AppendLog(() => Package.Current.Id.PublisherId);
                 AppendLog(() => Package.Current.Id.Architecture);
@@ -189,7 +188,7 @@ namespace UWPSystemInfoCollector
                             $"Id:{userDataAccount.Id}\tUserDisplayName:{userDataAccount.UserDisplayName}\tPackageFamilyName:{userDataAccount.PackageFamilyName}\tDeviceAccountTypeId:{userDataAccount.DeviceAccountTypeId}");
                     }
                 }
-
+                
                 #endregion
 
                 #region Windows.System.User
@@ -241,6 +240,10 @@ namespace UWPSystemInfoCollector
                 AppendLog(() => CurrentAppSimulator.LinkUri);
 
                 AppendLog("CampaignId", await CurrentAppSimulator.GetAppPurchaseCampaignIdAsync());
+
+                #endregion
+
+                #region Windows.System.Profile.RetailInfo
 
                 AppendLog("------------", 4);
 
